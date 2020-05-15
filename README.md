@@ -2,7 +2,7 @@
 
 #FakersGonnaFake: Using Simple Statistical Tools to Audit Instagram Accounts for Authenticity
 
-# Sample output
+## Sample output
 
 Terminal output
 <br><img src="https://github.com/athiyadeviyani/InstaBusted/blob/master/terminal_out.png" width=600/>
