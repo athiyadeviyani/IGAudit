@@ -4,6 +4,8 @@ from matplotlib import pyplot as plt
 import getpass
 import random
 
+
+# INITIAL AUTHENTICATION
 def login():
     username = input("username: ")
     password = getpass.getpass("password: ")
@@ -29,24 +31,31 @@ def get_followers(userID, rank):
     
     return user_fer
 
+
+# GET TARGET USER INFORMATION
 username = input("Instagram username for analysis: ")
 
 uid = get_ID(username)
 rank = api.generate_uuid()
 
+
+# GET USER'S FOLLOWERS
 followers = get_followers(uid, rank)
 
 print("This user has " + str(len(followers)) + " followers.")
 
 print("============================")
 
+
+# GENERATE RANDOM SAMPLE (for efficiency)
 samples = int(input("Number of random samples (recommended: 1-100): "))
 print("Generating " + str(samples) + " random samples for " + username + " followers!")
 random_followers = random.sample(followers, samples)
 
-
 print("Analyzing random samples...")
 
+
+# START ANALYSIS OF THE RANDOM SAMPLE
 suspicious = []
 tuples = []
 
@@ -72,15 +81,21 @@ for follower in random_followers:
     if (i%10==0):
         print(str(i) + " out of " + str(len(random_followers)) + " followers processed.")
     
+    # 'FAKENESS' THRESHOLD
+    # e.g. user_x has 100 followers and 2000 followings, user_x is flagged 'suspicious'
     if ratio > 20:
         suspicious.append(follower)
         
 print(str(len(suspicious)) + " suspicious accounts detected!")
 
+
+# CALCULATE THE OVERALL AUTHENTICITY OF THE USER
 percentage_fake = len(suspicious)*100/len(random_followers)
 
 print(username + " has " + str(100-percentage_fake) + "% authenticity!")
 
+
+# GENERATE THE GRAPH
 x = [x[0] for x in tuples]
 y = [x[1] for x in tuples]
 
