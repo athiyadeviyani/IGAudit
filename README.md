@@ -6,7 +6,7 @@
 *Inspired by igaudit.io, a very userful tool that was unfortunately taken down by Facebook recently.*
 
 ## Got your attention? Great!
-- If you want to read through the code and the outputs quickly, head over to the [Markdown](https://github.com/athiyadeviyani/IGAudit/blob/master/IGAudit_mdfiles/IGAudit.md) or the [HTML](https://igaudit-by-tia.glitch.me/) version of the Jupyter Notebook
+- If you want to read through the code and the outputs quickly, head over to the [PDF](https://github.com/athiyadeviyani/IGAudit/blob/master/IGAudit.pdf), [Markdown](https://github.com/athiyadeviyani/IGAudit/blob/master/IGAudit_mdfiles/IGAudit.md), or the [HTML](https://igaudit-by-tia.glitch.me/) version of the Jupyter Notebook
 - If you want to get your hands dirty and understand the inner workings of the code, make sure you install the following requirements and run the [Jupyter Notebook](https://github.com/athiyadeviyani/IGAudit/blob/master/IGAudit.ipynb)!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``$ pip install numpy pandas seaborn matplotlib sklearn``
